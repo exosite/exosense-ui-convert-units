@@ -200,6 +200,27 @@ tests['torque possibilities'] = function() {
   assert.deepEqual(actual.sort(), expected.sort());
 }
 
+
+tests['dynamic viscosity possibilities'] = function() {
+  var actual = convert().possibilities('dynamicViscosity')
+    , expected = ['pa-s', 'mpa-s', 'P'];
+
+  assert.deepEqual(actual.sort(), expected.sort());
+}
+
+tests['kinematic viscosity possibilities'] = function() {
+  var actual = convert().possibilities('kinematicViscosity')
+    , expected = ['cSt', 'St', 'm2/s'];
+  assert.deepEqual(actual.sort(), expected.sort());
+}
+
+tests['flow mass possibilities'] = function() {
+  var actual = convert().possibilities('flowMass')
+    , expected = ['kg/s', 'lbs/s'];
+  assert.deepEqual(actual.sort(), expected.sort());
+}
+
+
 tests['all possibilities'] = function () {
   var actual = convert().possibilities()
     // Please keep these sorted for maintainability
@@ -455,6 +476,19 @@ tests['all possibilities'] = function () {
       , "ozf"
 
       , 'lb-ft'
+
+
+      , 'pa-s'
+      , 'mpa-s'
+      , 'P'
+
+      , 'cSt'
+      , 'St'
+      , 'm2/s'
+
+      , 'kg/s'
+      , 'lbs/s'
+
     ];
 
   try {
