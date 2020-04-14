@@ -1,5 +1,7 @@
 var convert = require('../lib')
   , assert = require('assert')
+  , ACCURACY = 1/1000
+  , percentError = require('../lib/percentError')
   , tests = {};
 
 tests['Wh to Wh'] = function () {
@@ -80,6 +82,27 @@ tests['kWh to Wh'] = function () {
 
 tests['kWh to kJ'] = function () {
   assert.strictEqual( convert(1).from('kWh').to('kJ'), 3600);
+}
+
+tests['cal to btu'] = function () {
+  var expected = 0.00396567
+    , actual = convert(1).from('cal').to('btu');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+}
+
+tests['lb-ft to J'] = function () {
+  var expected = 0.737562
+    , actual = convert(1).from('lb-ft').to('J');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+}
+
+tests['J to lb-ft'] = function () {
+  var expected = 1/0.737562
+    , actual = convert(1).from('J').to('lb-ft');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
 }
 
 module.exports = tests;
