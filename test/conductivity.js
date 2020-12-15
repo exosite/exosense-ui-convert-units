@@ -28,19 +28,19 @@ tests['μS/m to S/m'] = function () {
 };
 
 tests['S/m to mS/cm'] = function () {
-  assert.strictEqual( convert(1).from('S/m').to('mS/cm') , 1/10);
+  assert.strictEqual( convert(1).from('S/m').to('mS/cm') , 10);
 };
 
 tests['mS/cm to S/m'] = function () {
-  assert.strictEqual( convert(1).from('mS/cm').to('S/m') , 10);
+  assert.strictEqual( convert(1).from('mS/cm').to('S/m') , 1/10);
 };
 
 tests['S/m to µS/cm'] = function () {
-  assert.strictEqual( convert(1).from('S/m').to('µS/cm') , 1/10000);
+  assert.strictEqual( convert(1).from('S/m').to('µS/cm') , 10000);
 };
 
 tests['µS/cm to S/m'] = function () {
-  assert.strictEqual( convert(1).from('µS/cm').to('S/m') , 10000);
+  assert.strictEqual( convert(1).from('µS/cm').to('S/m') , 1/10000);
 };
 
 module.exports = tests;
