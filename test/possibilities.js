@@ -361,7 +361,6 @@ tests['all possibilities'] = function () {
       , 'm/h'
       , 'm/s'
       , 'm/s2'
-      , 'mm/s2'
       , 'm2'
       , 'm3'
       , 'm3/h'
