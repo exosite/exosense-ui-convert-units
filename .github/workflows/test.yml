@@ -22,8 +22,5 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Lint
-        run: npm run linter
-
       - name: Test
         run: npm run test
