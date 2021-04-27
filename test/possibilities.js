@@ -361,7 +361,6 @@ tests['all possibilities'] = function () {
       , 'm/h'
       , 'm/s'
       , 'm/s2'
-      , 'mm/s2'
       , 'm2'
       , 'm3'
       , 'm3/h'
@@ -381,6 +380,7 @@ tests['all possibilities'] = function () {
       , 'ml/s'
       , 'mm'
       , 'mm/s'
+      , 'mm/s2'
       , 'mm2'
       , 'mm3'
       , 'mm3/s'
@@ -489,6 +489,18 @@ tests['all possibilities'] = function () {
 
       , 'kg/s'
       , 'lbs/s'
+
+      ,'μS/m'
+      ,'µS/cm'
+      ,'mg/L'
+      ,'mS/m'
+      ,'kg/m3'
+      ,'g/cm3'
+      ,'g/L'
+      ,'dS/m'
+      ,'S/m'
+      ,'mS/cm'
+
 
     ];
 

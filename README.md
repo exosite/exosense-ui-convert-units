@@ -365,6 +365,19 @@ Supported Units
 * g (g-force)
 * m/s2
 
+### Concentration mass
+* kg/m3
+* g/cm3
+* g/L
+* mg/L
+
+### Conductivity
+* S/m
+* dS/m
+* mS/m
+* μS/m
+* mS/cm
+* µS/cm
 
 ### Want More?
 
