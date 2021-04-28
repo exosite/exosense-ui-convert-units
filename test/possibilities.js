@@ -108,7 +108,7 @@ tests['voltage possibilities'] = function() {
 
 tests['power possibilities'] = function() {
   var actual = convert().possibilities('power')
-    , expected = [ 'W', 'mW', 'kW', 'MW', 'GW', 'μW', 'var', 'kva', 'kvar', 'hp'];
+    , expected = [ 'W', 'mW', 'kW', 'MW', 'GW', 'μW', 'hp'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
