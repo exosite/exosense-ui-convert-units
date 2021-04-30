@@ -68,16 +68,8 @@ tests['hp to W'] = function () {
   assert.strictEqual( convert(1).from('hp').to('W'), 745.7);
 }
 
-tests['hp to kvar'] = function () {
-  assert.strictEqual( convert(1).from('hp').to('kvar'), .7457);
-}
-
 tests['W to μW'] = function () {
   assert.strictEqual( convert(1).from('W').to('μW'), 1E6);
-}
-
-tests['W to var'] = function () {
-  assert.strictEqual( convert(1).from('W').to('var'), 1);
 }
 
 tests['kW to W'] = function () {
