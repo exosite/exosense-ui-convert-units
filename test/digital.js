@@ -30,19 +30,19 @@ tests['B to B'] = function () {
 };
 
 tests['KB to B'] = function () {
-  assert.strictEqual( convert(1).from('KB').to('B') , 1024);
+  assert.strictEqual( convert(1).from('KB').to('B') , 1e3);
 };
 
 tests['MB to B'] = function () {
-  assert.strictEqual( convert(1).from('MB').to('B') , 1048576);
+  assert.strictEqual( convert(1).from('MB').to('B') , 1e6);
 };
 
 tests['GB to B'] = function () {
-  assert.strictEqual( convert(1).from('GB').to('B') , 1073741824);
+  assert.strictEqual( convert(1).from('GB').to('B') , 1e9);
 };
 
 tests['TB to B'] = function () {
-  assert.strictEqual( convert(1).from('TB').to('B') , 1099511627776);
+  assert.strictEqual( convert(1).from('TB').to('B') , 1e12);
 };
 
 // When converting between systems, expect < 0.1% error
