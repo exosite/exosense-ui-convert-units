@@ -490,6 +490,9 @@ tests['all possibilities'] = function () {
       ,'μS/m'
       ,'µS/cm'
       ,'mg/L'
+      ,'mg/m3'
+      ,'µg/L'
+      ,'µg/m3'
       ,'mS/m'
       ,'kg/m3'
       ,'g/cm3'
@@ -497,8 +500,6 @@ tests['all possibilities'] = function () {
       ,'dS/m'
       ,'S/m'
       ,'mS/cm'
-
-
     ];
 
   try {
