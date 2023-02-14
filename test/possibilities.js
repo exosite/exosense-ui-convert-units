@@ -84,7 +84,7 @@ tests['pressure possibilities'] = function() {
 
 tests['speed possibilities'] = function() {
   var actual = convert().possibilities('speed')
-    , expected = [ 'm/s', 'mm/s', 'km/h', 'm/h', 'knot', 'ft/s', 'in/s'];
+    , expected = [ 'm/s', 'mm/s', 'km/h', 'm/h', 'knot', 'ft/s', 'in/s', 'ft/m'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -168,7 +168,7 @@ tests['force possibilities'] = function() {
 
 tests['acceleration possibilities'] = function() {
   var actual = convert().possibilities('acceleration')
-    , expected = [ 'g-force', 'm/s2', 'ft/s2', 'in/s2', 'mm/s2'];
+    , expected = [ 'g-force', 'm/s2', 'ft/s2', 'in/s2', 'mm/s2', 'ft/m2'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -286,6 +286,8 @@ tests['all possibilities'] = function () {
       , 'ft-cd'
       , 'ft/s'
       , 'ft/s2'
+      , 'ft/m'
+      , 'ft/m2'
       , 'ft2'
       , 'ft3'
       , 'ft3/h'
