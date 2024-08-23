@@ -226,6 +226,7 @@ tests['all possibilities'] = function () {
     // Please keep these sorted for maintainability
     , expected = [
         'A'
+      , 'Ah'
       , 'arcmin'
       , 'arcsec'
       , 'B'
@@ -367,6 +368,7 @@ tests['all possibilities'] = function () {
       , 'm3/min'
       , 'm3/s'
       , 'mA'
+      , 'mAh'
       , 'mC'
       , 'mcg'
       , 'mg'
