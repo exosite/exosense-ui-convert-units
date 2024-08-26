@@ -156,7 +156,7 @@ tests['angle possibilities'] = function() {
 
 tests['charge possibilities'] = function() {
   var actual = convert().possibilities('charge')
-    , expected = [ 'c', 'mC', 'μC', 'nC', 'pC'];
+    , expected = [ 'c', 'mC', 'μC', 'nC', 'pC', 'mAh', 'Ah'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
