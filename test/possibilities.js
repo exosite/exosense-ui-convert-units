@@ -156,7 +156,7 @@ tests['angle possibilities'] = function() {
 
 tests['charge possibilities'] = function() {
   var actual = convert().possibilities('charge')
-    , expected = [ 'c', 'mC', 'μC', 'nC', 'pC'];
+    , expected = [ 'c', 'mC', 'μC', 'nC', 'pC', 'mAh', 'Ah'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -226,6 +226,7 @@ tests['all possibilities'] = function () {
     // Please keep these sorted for maintainability
     , expected = [
         'A'
+      , 'Ah'
       , 'arcmin'
       , 'arcsec'
       , 'B'
@@ -367,6 +368,7 @@ tests['all possibilities'] = function () {
       , 'm3/min'
       , 'm3/s'
       , 'mA'
+      , 'mAh'
       , 'mC'
       , 'mcg'
       , 'mg'

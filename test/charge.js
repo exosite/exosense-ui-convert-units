@@ -8,6 +8,22 @@ tests['Co to Co'] = function () {
   assert.strictEqual( convert(1).from('c').to('c') , 1);
 };
 
+tests['Co to mAh'] = function () {
+  assert.strictEqual( convert(1).from('c').to('mAh') , 1/3.6);
+};
+
+tests['Co to Ah'] = function () {
+  assert.strictEqual( convert(1).from('c').to('Ah') , 1/3600);
+};
+
+tests['Ah to Co'] = function () {
+  assert.strictEqual( convert(1).from('Ah').to('c') , 3600);
+};
+
+tests['Ah to mAh'] = function () {
+  assert.strictEqual( convert(1).from('Ah').to('mAh') , 1000);
+};
+
 tests['Co to mC'] = function () {
   assert.strictEqual( convert(1).from('c').to('mC') , 1000);
 };
