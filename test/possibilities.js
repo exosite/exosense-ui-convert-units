@@ -324,6 +324,10 @@ tests['all possibilities'] = function () {
       , 'in3/s'
       , "inH2O"
       , 'J'
+      , '∆C'
+      , '∆F'
+      , '∆K'
+      , '∆R'
       , 'kA'
       , 'kPa'
       , 'kanna'

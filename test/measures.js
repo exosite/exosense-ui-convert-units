@@ -4,7 +4,48 @@ var convert = require('../lib')
 
 tests['measures'] = function () {
   var actual = convert().measures()
-    , expected = [ 'length', 'area', 'mass', 'volume', 'each', 'temperature', 'time', 'digital', 'partsPer', 'speed', 'pace', 'pressure', 'current', 'voltage', 'power', 'reactivePower', 'apparentPower', 'energy', 'reactiveEnergy', 'volumeFlowRate', 'illuminance', 'frequency', 'angle', 'charge', 'capacitance', 'force', 'acceleration', 'angularVelocity', 'resistance', 'torque', 'dynamicViscosity', 'kinematicViscosity', 'flowMass', 'conductivity', 'concentrationMass' ];
+    , expected = [ 
+      'acceleration',
+      'angle',
+      'angularVelocity',
+      'apparentPower',
+      'area',
+      'capacitance',
+      'charge',
+      'concentrationMass',
+      'conductivity',
+      'current',
+      'digital',
+      'dynamicViscosity',
+      'each',
+      'energy',
+      'flowMass',
+      'force',
+      'frequency',
+      'illuminance',
+      'kinematicViscosity',
+      'length',
+      'mass',
+      'pace',
+      'partsPer',
+      'power',
+      'pressure',
+      'reactiveEnergy',
+      'reactivePower',
+      'resistance',
+      'speed',
+      'temperature',
+      'temperatureDelta',
+      'time',
+      'torque',
+      'voltage',
+      'volume',
+      'volumeFlowRate'
+     ];
+
+    console.log(JSON.stringify(actual.sort()));
+    console.log(JSON.stringify(expected.sort()));
+  assert.equal(actual.length, expected.length);
   assert.deepEqual(actual, expected);
 };
 
