@@ -79,6 +79,16 @@ tests['mmHg to inH2O'] = function () {
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
+tests['"µHg", "mTorr", to inH2O'] = function () {
+  var expected = 0.00053524
+  var actual1 = convert(1).from('µHg').to('inH2O');
+  assert.ok( percentError(expected, actual1) < ACCURACY
+  , 'Expected: ' + expected +', Actual: ' + actual1);
+  var actual2 = convert(1).from('mTorr').to('inH2O');
+  assert.ok( percentError(expected, actual2) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual2);
+};
+
 tests['inH2O to psi'] = function () {
   var expected = 0.0360912
     , actual = convert(1).from('inH2O').to('psi');

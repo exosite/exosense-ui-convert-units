@@ -78,13 +78,13 @@ tests['partsPer possibilities'] = function() {
 
 tests['pressure possibilities'] = function() {
   var actual = convert().possibilities('pressure')
-    , expected = [ 'Pa', 'kPa', 'MPa', 'hPa', 'bar', 'torr', 'psi', 'ksi', 'atm', 'millibar', "mmHg", "N/m2", 'inH2O'];
+    , expected = [ 'Pa', 'kPa', 'MPa', 'hPa', 'bar', 'torr', 'psi', 'ksi', 'atm', 'millibar', 'mmHg', 'µHg', 'mTorr', 'N/m2', 'inH2O'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
 tests['speed possibilities'] = function() {
   var actual = convert().possibilities('speed')
-    , expected = [ 'm/s', 'mm/s', 'km/h', 'm/h', 'knot', 'ft/s', 'in/s'];
+    , expected = [ 'm/s', 'mm/s', 'km/h', 'm/h', 'knot', 'ft/s', 'in/s', 'ft/m'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -126,7 +126,7 @@ tests['apparent power possibilities'] = function() {
 
 tests['energy possibilities'] = function() {
   var actual = convert().possibilities('energy')
-    , expected = [ 'Wh', 'mWh', 'kWh', 'MWh', 'GWh', 'J', 'kJ', 'btu', 'cal', 'kcal', 'lb-ft'];
+    , expected = [ 'Wh', 'mWh', 'kWh', 'MWh', 'GWh', 'J', 'kJ', 'btu', 'cal', 'kcal', 'ft-lb'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -156,7 +156,7 @@ tests['angle possibilities'] = function() {
 
 tests['charge possibilities'] = function() {
   var actual = convert().possibilities('charge')
-    , expected = [ 'c', 'mC', 'μC', 'nC', 'pC'];
+    , expected = [ 'c', 'mC', 'μC', 'nC', 'pC', 'mAh', 'Ah'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -168,7 +168,7 @@ tests['force possibilities'] = function() {
 
 tests['acceleration possibilities'] = function() {
   var actual = convert().possibilities('acceleration')
-    , expected = [ 'g-force', 'm/s2', 'ft/s2', 'in/s2', 'mm/s2'];
+    , expected = [ 'g-force', 'm/s2', 'ft/s2', 'in/s2', 'mm/s2', 'ft/m2'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -226,6 +226,7 @@ tests['all possibilities'] = function () {
     // Please keep these sorted for maintainability
     , expected = [
         'A'
+      , 'Ah'
       , 'arcmin'
       , 'arcsec'
       , 'B'
@@ -286,6 +287,8 @@ tests['all possibilities'] = function () {
       , 'ft-cd'
       , 'ft/s'
       , 'ft/s2'
+      , 'ft/m'
+      , 'ft/m2'
       , 'ft2'
       , 'ft3'
       , 'ft3/h'
@@ -321,6 +324,10 @@ tests['all possibilities'] = function () {
       , 'in3/s'
       , "inH2O"
       , 'J'
+      , '∆C'
+      , '∆F'
+      , '∆K'
+      , '∆R'
       , 'kA'
       , 'kPa'
       , 'kanna'
@@ -365,6 +372,7 @@ tests['all possibilities'] = function () {
       , 'm3/min'
       , 'm3/s'
       , 'mA'
+      , 'mAh'
       , 'mC'
       , 'mcg'
       , 'mg'
@@ -383,10 +391,12 @@ tests['all possibilities'] = function () {
       , 'mm3'
       , 'mm3/s'
       , "mmHg"
+      , 'µHg'
       , 'month'
       , 'ms'
       , 'msk'
       , 'mt'
+      , 'mTorr'
       , 'mu'
       , 'nC'
       , 'mHz'
@@ -473,7 +483,7 @@ tests['all possibilities'] = function () {
       , "mtf"
       , "ozf"
 
-      , 'lb-ft'
+      , 'ft-lb'
 
 
       , 'pa-s'
