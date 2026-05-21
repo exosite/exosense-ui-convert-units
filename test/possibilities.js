@@ -168,7 +168,7 @@ tests['force possibilities'] = function() {
 
 tests['acceleration possibilities'] = function() {
   var actual = convert().possibilities('acceleration')
-    , expected = [ 'g-force', 'm/s2', 'ft/s2', 'in/s2', 'mm/s2', 'ft/m2'];
+    , expected = [ 'g-force', 'milli-g-force', 'm/s2', 'ft/s2', 'in/s2', 'mm/s2', 'ft/m2'];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -296,6 +296,7 @@ tests['all possibilities'] = function () {
       , 'ft3/s'
       , 'g'
       , 'g-force'
+      , 'milli-g-force'
       , 'gal'
       , 'gal/h'
       , 'gal/min'
