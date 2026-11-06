@@ -96,4 +96,25 @@ tests['inH2O to psi'] = function () {
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
+tests['inHg to psi'] = function () {
+  var expected = 0.4911542
+    , actual = convert(1).from('inHg').to('psi');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
+tests['inHg to mmHg'] = function () {
+  var expected = 25.4
+    , actual = convert(1).from('inHg').to('mmHg');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
+tests['kPa to inHg'] = function () {
+  var expected = 29.9213
+    , actual = convert(101.325).from('kPa').to('inHg');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
 module.exports = tests;
